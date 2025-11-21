@@ -1,0 +1,84 @@
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+
+// Import routes
+const userRoutes = require("./routes/user.routes");
+const userRoutesNew = require("./routes/userRoutes");
+const personagensRouter = require("./routes/personagem.routes");
+const contentRouter = require("./routes/content.route");
+const hqRouter = require("./routes/hq.route");
+const chatRouter = require("./routes/chat.routes");
+const quizFeedbackRouter = require("./routes/quiz_feedback.routes");
+
+const app = express();
+
+// Middlewares globais
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Rotas API - IMPORTANTE: rotas específicas devem vir antes de rotas com parâmetros
+app.use("/api/users", userRoutesNew); // Rotas específicas primeiro (/register, /login)
+app.use("/api/users", userRoutes); // Rotas com parâmetros depois (/:id)
+app.use("/api/personagens", personagensRouter);
+app.use("/api/content", contentRouter);
+app.use("/api/hq", hqRouter);
+app.use("/api/chat", chatRouter);
+app.use("/api/quiz-feedback", quizFeedbackRouter);
+
+// Rotas de compatibilidade para o chatbot (sem prefixo /chat)
+app.use("/api", chatRouter);
+
+// Servir arquivos estáticos da pasta frontend
+app.use(express.static(path.join(__dirname, "../../frontend")));
+
+// Rota raiz simples
+app.get("/", (req, res) => {
+    res.send("API Node.js com MongoDB está funcionando!");
+});
+
+app.get("/api/download/pdf", async (req, res) => {
+    try {
+        const jwt = require("jsonwebtoken");
+        let token = null;
+        const auth = req.headers["authorization"] || "";
+        if (auth.startsWith("Bearer "))
+            token = auth.substring("Bearer ".length).trim();
+        if (!token && req.query && req.query.token)
+            token = String(req.query.token);
+        if (!token) return res.status(401).json({ message: "Não autenticado" });
+        const secret =
+            process.env.JWT_SECRET || "17cc634a0ccf32354c7bab9ee29fe802";
+        jwt.verify(token, secret);
+
+        const file = String(req.query.file || "");
+        if (!file || !file.toLowerCase().endsWith(".pdf")) {
+            return res.status(400).json({ message: "Arquivo inválido" });
+        }
+        if (file.includes("..") || file.includes("/") || file.includes("\\")) {
+            return res.status(400).json({ message: "Caminho inválido" });
+        }
+        const pdfDir = path.join(__dirname, "../pdf");
+        const absPath = path.join(pdfDir, file);
+        return res.sendFile(absPath, (err) => {
+            if (err) {
+                return res
+                    .status(404)
+                    .json({ message: "Arquivo não encontrado" });
+            }
+        });
+    } catch (error) {
+        return res
+            .status(401)
+            .json({ message: "Token inválido ou erro no download" });
+    }
+});
+
+// 404
+app.use((req, res, next) => {
+    res.status(404).json({ message: "Endpoint não encontrado." });
+});
+
+module.exports = app;

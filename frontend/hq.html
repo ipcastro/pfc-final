@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HQ - Fantástico mundo da Física</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+            };
+        </script>
+        <link rel="stylesheet" href="css/custom-styles.css" />
+    </head>
+
+    <body class="bg-gray-50 dark:bg-gray-900">
+        <nav
+            class="bg-white border-gray-200 dark:bg-gray-900 shadow-sm sticky top-0 z-50"
+        >
+            <div
+                class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+            >
+                <a
+                    href="index.html"
+                    class="flex items-center space-x-3 rtl:space-x-reverse"
+                >
+                    <img
+                        src="img/logopng.png"
+                        class="h-12"
+                        alt="Fantástico mundo da Física Logo"
+                    />
+                    <span
+                        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                        >Fantástico mundo da Física</span
+                    >
+                </a>
+                <div
+                    class="flex items-center md:order-2 space-x-3 rtl:space-x-reverse"
+                >
+                    <div id="theme-toggle-container">
+                        <!-- Theme toggle button will be inserted here -->
+                    </div>
+                    <div id="user-status-container">
+                        <!-- User status (login/logout) will be inserted here -->
+                    </div>
+                    <button
+                        data-collapse-toggle="navbar-default"
+                        type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-default"
+                        aria-expanded="false"
+                    >
+                        <span class="sr-only">Open main menu</span>
+                        <svg
+                            class="w-5 h-5"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 17 14"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                    id="navbar-default"
+                >
+                    <ul
+                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+                    >
+                        <li>
+                            <a
+                                href="index.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                >Início</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="personagens.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                >Personagens</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="o-que-aprender.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                >Aprender</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="hq.html"
+                                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                                aria-current="page"
+                                >HQ</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="contato.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                >Contato</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section
+            class="pt-32 bg-gradient-to-b from-primary-50 via-secondary-50 to-accent-50 dark:from-gray-900 dark:to-gray-800"
+        >
+            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+                <h1
+                    class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+                >
+                    História em Quadrinhos
+                </h1>
+                <p
+                    class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+                >
+                    Aprenda física de forma divertida com nossa HQ educacional!
+                    Acompanhe as aventuras de Amélia e Newton enquanto exploram
+                    os conceitos fundamentais da cinemática.
+                </p>
+            </div>
+        </section>
+
+        <main
+            id="hq-container"
+            class="py-8 px-4 mx-auto max-w-5xl lg:py-12 grid grid-cols-1 gap-8 bg-gradient-to-b from-accent-50 via-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-900"
+        >
+            <!-- HQs will be loaded here dynamically -->
+        </main>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", async () => {
+                const hqContainer = document.getElementById("hq-container");
+
+                async function loadHQs() {
+                    try {
+                        const response = await fetch("data/hqs.json");
+                        if (!response.ok) {
+                            throw new Error(
+                                "Não foi possível carregar os dados das HQs.",
+                            );
+                        }
+                        const hqs = await response.json();
+                        renderHQs(hqs);
+                    } catch (error) {
+                        console.error("Erro ao carregar HQs:", error);
+                        hqContainer.innerHTML = `<p class="text-red-500 text-center">${error.message}</p>`;
+                    }
+                }
+
+                function renderHQs(hqs) {
+                    hqContainer.innerHTML = "";
+                    hqs.forEach((hq) => {
+                        const hqElement = document.createElement("div");
+                        hqElement.classList.add(
+                            "group",
+                            "relative",
+                            "overflow-hidden",
+                            "rounded-lg",
+                            "shadow-lg",
+                            "transform",
+                            "transition-transform",
+                            "duration-300",
+                            "hover:scale-105",
+                            "bg-white",
+                            "dark:bg-gray-800",
+                        );
+                        hqElement.innerHTML = `
+                            <div class="p-6">
+                            <div class="flex gap-4">
+                            <img src="${hq.cover}" alt="Capa da HQ ${hq.title}" class="w-full w-80 object-fit">
+                            <div class="m-auto">
+                                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">${hq.title}</h2>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">${hq.description}</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <a href="flipbook.html?pdf=${hq.pdf}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                                        Ler Online
+                                    </a>
+                                    <a href="pdf/${hq.pdf}" download class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-300 dark:focus:ring-green-900">
+                                        Baixar PDF
+                                    </a>
+                                    <a href="quiz.html?hqId=${hq.id}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-purple-600 rounded-lg hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900">
+                                        Fazer Quiz
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        `;
+                        hqContainer.appendChild(hqElement);
+                    });
+                }
+
+                loadHQs();
+
+                const button = document.querySelector(
+                    '[data-collapse-toggle="navbar-default"]',
+                );
+                const menu = document.getElementById("navbar-default");
+
+                button.addEventListener("click", function () {
+                    menu.classList.toggle("hidden");
+                });
+            });
+        </script>
+        <script src="js/auth.js"></script>
+        <script src="js/theme-switcher.js"></script>
+        <script src="js/user-status.js"></script>
+    </body>
+</html>

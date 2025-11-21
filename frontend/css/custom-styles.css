@@ -1,0 +1,962 @@
+:root {
+    --color-primary-1: #8b5cf6;
+    --color-primary-2: #7c3aed;
+    --color-secondary-1: #3b82f6;
+    --color-accent-1: #ec4899;
+    --color-accent-2: #f59e0b;
+    --color-cosmic-1: #667eea;
+    --color-cosmic-2: #764ba2;
+    --color-sunset-1: #f093fb;
+    --color-sunset-2: #f5576c;
+    --color-ocean-1: #4facfe;
+    --color-ocean-2: #00f2fe;
+    --color-forest-1: #43e97b;
+    --color-forest-2: #38f9d7;
+
+    --bg-glass: rgba(255, 255, 255, 0.1);
+    --bg-glass-hover: rgba(255, 255, 255, 0.15);
+    --bg-glass-gallery: rgba(255, 255, 255, 0.95);
+    --border-glass: rgba(255, 255, 255, 0.2);
+    --border-glass-gallery: rgba(255, 255, 255, 0.3);
+    --shadow-glass: rgba(0, 0, 0, 0.1);
+    --shadow-glass-hover: rgba(0, 0, 0, 0.2);
+    --shadow-inset-glass: rgba(255, 255, 255, 0.2);
+    --shadow-inset-glass-gallery: rgba(255, 255, 255, 0.4);
+
+    --ripple-bg: rgba(255, 255, 255, 0.6);
+    --btn-neon-text: white;
+    --btn-neon-shadow: rgba(102, 126, 234, 0.4);
+    --btn-neon-shadow-hover: rgba(102, 126, 234, 0.8);
+    --btn-neon-flare: rgba(255, 255, 255, 0.4);
+    --btn-magnetic-flare: rgba(255, 255, 255, 0.2);
+
+    --loading-spinner-bg: rgba(139, 92, 246, 0.3);
+    --img-glow-shadow: rgba(139, 92, 246, 0.3);
+    --img-glow-shadow-hover: rgba(139, 92, 246, 0.6);
+
+    --particle-bg: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);
+    --particle-bg-enhanced: radial-gradient(circle, rgba(139, 92, 246, 0.8) 0%, rgba(59, 130, 246, 0.4) 100%);
+
+    --text-3d-shadow-1: #ccc;
+    --text-3d-shadow-2: #c9c9c9;
+    --text-3d-shadow-3: #bbb;
+    --text-3d-shadow-4: #b9b9b9;
+    --text-3d-shadow-5: #aaa;
+    --text-3d-shadow-ambient-1: rgba(0, 0, 0, 0.1);
+    --text-3d-shadow-ambient-2: rgba(0, 0, 0, 0.3);
+    --text-3d-shadow-ambient-3: rgba(0, 0, 0, 0.2);
+    --text-3d-shadow-ambient-4: rgba(0, 0, 0, 0.25);
+    --text-3d-shadow-ambient-5: rgba(0, 0, 0, 0.15);
+
+    --section-parallax-bg: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    --bg-pattern-1: rgba(139, 92, 246, 0.1);
+    --bg-pattern-2: rgba(59, 130, 246, 0.1);
+    --bg-pattern-3: rgba(236, 72, 153, 0.1);
+
+    --hero-collage-shadow: rgba(0, 0, 0, 0.15);
+    --hover-lift-shadow: rgba(0, 0, 0, 0.15);
+
+    --typing-caret-color: #8b5cf6;
+}
+
+.dark {
+    --bg-glass: rgba(0, 0, 0, 0.2);
+    --bg-glass-hover: rgba(0, 0, 0, 0.3);
+    --bg-glass-gallery: rgba(0, 0, 0, 0.3);
+    --border-glass: rgba(255, 255, 255, 0.1);
+    --border-glass-gallery: rgba(255, 255, 255, 0.1);
+    --shadow-glass: rgba(0, 0, 0, 0.3);
+    --shadow-glass-hover: rgba(0, 0, 0, 0.4);
+    --shadow-inset-glass: rgba(255, 255, 255, 0.1);
+    --shadow-inset-glass-gallery: rgba(255, 255, 255, 0.1);
+
+    --ripple-bg: rgba(0, 0, 0, 0.6);
+    --btn-neon-text: white;
+    --btn-neon-shadow: rgba(167, 139, 250, 0.4);
+    --btn-neon-shadow-hover: rgba(167, 139, 250, 0.8);
+    --btn-neon-flare: rgba(255, 255, 255, 0.3);
+    --btn-magnetic-flare: rgba(255, 255, 255, 0.1);
+
+    --loading-spinner-bg: rgba(167, 139, 250, 0.3);
+    --img-glow-shadow: rgba(167, 139, 250, 0.4);
+    --img-glow-shadow-hover: rgba(167, 139, 250, 0.7);
+
+    --particle-bg: radial-gradient(circle, rgba(200, 200, 255, 0.6) 0%, rgba(200, 200, 255, 0.1) 100%);
+    --particle-bg-enhanced: radial-gradient(circle, rgba(167, 139, 250, 0.8) 0%, rgba(96, 165, 250, 0.4) 100%);
+
+    --text-3d-shadow-1: #222;
+    --text-3d-shadow-2: #1e1e1e;
+    --text-3d-shadow-3: #1a1a1a;
+    --text-3d-shadow-4: #161616;
+    --text-3d-shadow-5: #121212;
+    --text-3d-shadow-ambient-1: rgba(255, 255, 255, 0.05);
+    /* Lighter shadows for dark mode */
+}
+
+/* Estilos Personalizados Avançados */
+
+/* Cursor personalizado */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, var(--color-primary-1), var(--color-secondary-1));
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor.cursor-hover {
+    transform: scale(2);
+    background: linear-gradient(45deg, var(--color-accent-1), var(--color-accent-2));
+}
+
+/* Efeito de ripple para botões */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--ripple-bg);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Gradientes de fundo mais elaborados */
+.bg-gradient-cosmic {
+    background: linear-gradient(135deg, var(--color-cosmic-1) 0%, var(--color-cosmic-2) 100%);
+}
+
+.bg-gradient-sunset {
+    background: linear-gradient(135deg, var(--color-sunset-1) 0%, var(--color-sunset-2) 100%);
+}
+
+.bg-gradient-ocean {
+    background: linear-gradient(135deg, var(--color-ocean-1) 0%, var(--color-ocean-2) 100%);
+}
+
+.bg-gradient-forest {
+    background: linear-gradient(135deg, var(--color-forest-1) 0%, var(--color-forest-2) 100%);
+}
+
+/* Efeitos de glassmorphism */
+.glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+}
+
+.glass-dark {
+    /* This class is now redundant, but kept for compatibility. Use .dark .glass instead. */
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Efeitos de texto mais elaborados */
+.text-gradient {
+    background: linear-gradient(45deg, var(--color-cosmic-1), var(--color-cosmic-2), var(--color-sunset-1), var(--color-sunset-2));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-shift {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Cards com efeito de vidro */
+.card-glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-glass);
+    box-shadow: 0 8px 32px var(--shadow-glass);
+}
+
+.card-glass:hover {
+    background: var(--bg-glass-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-glass-hover);
+}
+
+
+/* Efeitos de borda animada */
+.border-gradient {
+    position: relative;
+    background: linear-gradient(45deg, var(--color-cosmic-1), var(--color-cosmic-2), var(--color-sunset-1), var(--color-sunset-2));
+    padding: 2px;
+    border-radius: 1rem;
+}
+
+.border-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, var(--color-cosmic-1), var(--color-cosmic-2), var(--color-sunset-1), var(--color-sunset-2));
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--color-cosmic-1), var(--color-cosmic-2), var(--color-sunset-1), var(--color-sunset-2));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* Efeitos de loading mais elaborados */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--loading-spinner-bg);
+    border-top: 4px solid var(--color-primary-1);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efeitos de hover mais sofisticados */
+.hover-tilt {
+    transition: transform 0.3s ease;
+}
+
+.hover-tilt:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+}
+
+/* Efeitos de scroll personalizados */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-cosmic-1), var(--color-cosmic-2));
+    transform-origin: left;
+    z-index: 1000;
+}
+
+/* Efeitos de partículas mais elaborados */
+.particle-system {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle-system .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--particle-bg);
+    border-radius: 50%;
+    animation: particleFloat 8s infinite linear;
+}
+
+/* Efeitos de texto 3D */
+.text-3d {
+    text-shadow:
+        0 1px 0 var(--text-3d-shadow-1),
+        0 2px 0 var(--text-3d-shadow-2),
+        0 3px 0 var(--text-3d-shadow-3),
+        0 4px 0 var(--text-3d-shadow-4),
+        0 5px 0 var(--text-3d-shadow-5),
+        0 6px 1px var(--text-3d-shadow-ambient-1),
+        0 0 5px var(--text-3d-shadow-ambient-1),
+        0 1px 3px var(--text-3d-shadow-ambient-2),
+        0 3px 5px var(--text-3d-shadow-ambient-3),
+        0 5px 10px var(--text-3d-shadow-ambient-4),
+        0 10px 10px var(--text-3d-shadow-ambient-3),
+        0 20px 20px var(--text-3d-shadow-ambient-5);
+}
+
+/* Efeitos de botão mais elaborados */
+.btn-neon {
+    position: relative;
+    background: linear-gradient(45deg, var(--color-cosmic-1), var(--color-cosmic-2));
+    border: none;
+    color: var(--btn-neon-text);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px var(--btn-neon-shadow);
+}
+
+.btn-neon:hover {
+    box-shadow: 0 0 30px var(--btn-neon-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.btn-neon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        var(--btn-neon-flare),
+        transparent);
+    transition: left 0.5s;
+}
+
+.btn-neon:hover::before {
+    left: 100%;
+}
+
+/* Efeitos de imagem mais elaborados */
+.img-glow {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px var(--img-glow-shadow));
+}
+
+.img-glow:hover {
+    filter: drop-shadow(0 0 20px var(--img-glow-shadow-hover));
+    transform: scale(1.05);
+}
+
+/* Efeitos de navegação mais elaborados */
+.nav-glow {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-glow::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-cosmic-1), var(--color-cosmic-2));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-glow:hover::before {
+    width: 100%;
+}
+
+/* Efeitos de seção mais elaborados */
+.section-parallax {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--section-parallax-bg);
+    transform: translateZ(-1px) scale(2);
+}
+
+/* Responsividade para efeitos */
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none;
+    }
+
+    .text-3d {
+        text-shadow:
+            0 1px 0 var(--text-3d-shadow-1),
+            0 2px 0 var(--text-3d-shadow-2),
+            0 3px 0 var(--text-3d-shadow-3);
+    }
+
+    .card-glass {
+        background: rgba(255, 255, 255, 0.9);
+        /* Less transparency on mobile for readability */
+        backdrop-filter: none;
+    }
+
+    .dark .card-glass {
+        background: rgba(31, 41, 55, 0.9);
+        /* Corresponds to gray-800 with opacity */
+    }
+}
+
+/* FAQ Animations */
+.faq-content {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.faq-content:not(.hidden) {
+    max-height: 500px;
+}
+
+.faq-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+/* Scroll Progress Indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary-1), var(--color-secondary-1), var(--color-accent-1));
+    z-index: 1000;
+    transition: width 0.1s ease;
+}
+
+/* Enhanced Glass Effects */
+.card-glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass);
+    box-shadow:
+        0 8px 32px var(--shadow-glass),
+        inset 0 1px 0 var(--shadow-inset-glass);
+}
+
+/* .dark .card-glass is already defined at the top */
+
+/* Enhanced Text Effects */
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-primary-1), var(--color-secondary-1), var(--color-accent-1));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-shimmer {
+    background: linear-gradient(90deg, var(--color-primary-1), var(--color-secondary-1), var(--color-accent-1), var(--color-primary-1));
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 2s linear infinite;
+}
+
+/* Enhanced Button Effects */
+.btn-neon {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-primary-1), var(--color-secondary-1));
+    border: none;
+    color: var(--btn-neon-text);
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px var(--btn-neon-shadow);
+}
+
+.btn-neon:hover {
+    box-shadow: 0 0 30px var(--btn-neon-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.btn-neon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        var(--btn-neon-flare),
+        transparent);
+    transition: left 0.5s;
+}
+
+.btn-neon:hover::before {
+    left: 100%;
+}
+
+/* Enhanced Magnetic Button */
+.btn-magnetic {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-magnetic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        var(--btn-magnetic-flare),
+        transparent);
+    transition: left 0.5s;
+}
+
+.btn-magnetic:hover::before {
+    left: 100%;
+}
+
+/* Enhanced Particle System */
+.particle-system {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle-system .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--particle-bg-enhanced);
+    border-radius: 50%;
+    animation: particleFloat 8s infinite linear;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Enhanced Background Pattern */
+.bg-pattern {
+    background-image:
+        radial-gradient(circle at 25% 25%,
+            var(--bg-pattern-1) 0%,
+            transparent 50%),
+        radial-gradient(circle at 75% 75%,
+            var(--bg-pattern-2) 0%,
+            transparent 50%),
+        radial-gradient(circle at 50% 50%,
+            var(--bg-pattern-3) 0%,
+            transparent 50%);
+    background-size:
+        200px 200px,
+        150px 150px,
+        100px 100px;
+    animation: patternMove 20s linear infinite;
+}
+
+/* Hero Collage */
+.hero-collage .animate-float {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-collage .animate-float:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 25px 50px var(--hero-collage-shadow);
+}
+
+/* Efeito flutuar suave para imagens gerais (home) */
+.img-float {
+    animation: float 7s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .hero-collage .animate-float {
+        animation: none;
+    }
+}
+
+@keyframes patternMove {
+    0% {
+        background-position:
+            0 0,
+            0 0,
+            0 0;
+    }
+
+    100% {
+        background-position:
+            200px 200px,
+            150px 150px,
+            100px 100px;
+    }
+}
+
+/* Enhanced Typing Effect */
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid var(--typing-caret-color);
+    white-space: nowrap;
+    animation:
+        typing 3s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--typing-caret-color);
+    }
+}
+
+/* Enhanced Counter Animation */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Enhanced Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Hover Effects */
+.hover-lift {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--hover-lift-shadow);
+}
+
+.hover-scale {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Enhanced Navigation */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary-1), var(--color-secondary-1));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Floating Cards Gallery */
+.floating-card {
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-card:nth-child(1) {
+    animation-delay: 0s;
+    animation-duration: 6s;
+}
+
+.floating-card:nth-child(2) {
+    animation-delay: 2s;
+    animation-duration: 8s;
+}
+
+.floating-card:nth-child(3) {
+    animation-delay: 4s;
+    animation-duration: 7s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(0.5deg);
+    }
+}
+
+/* Hero collage tweaks: espaçamento, tamanhos responsivos e animação sutil */
+.hero-collage {
+    gap: 1rem;
+}
+
+.hero-collage .rounded-2xl {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero-collage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+        transform 0.6s cubic-bezier(0.2, 0.9, 0.3, 1),
+        box-shadow 0.3s ease;
+}
+
+.hero-collage .float-y {
+    animation: floatY 6s ease-in-out infinite;
+}
+
+.hero-collage .rounded-2xl:hover img {
+    transform: scale(1.03);
+}
+
+@keyframes floatY {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Ajustes responsivos adicionais para evitar espaços vazios */
+@media (min-width: 768px) {
+    .hero-collage {
+        gap: 1.25rem;
+    }
+}
+
+/* Posicionamento responsivo específico para algumas imagens do hero */
+.hero-foto4,
+.hero-foto3 {
+    transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+/* Quando a tela fica um pouco menor, desloca a foto4 mais para baixo e a foto3 levemente */
+@media (max-width: 1100px) {
+    .hero-foto4 {
+        transform: translateY(20px);
+    }
+
+    .hero-foto3 {
+        transform: translateY(10px);
+    }
+}
+
+/* Em telas ainda menores, aumenta um pouco o deslocamento para manter o espaçamento visual */
+@media (max-width: 900px) {
+    .hero-foto4 {
+        transform: translateY(30px);
+    }
+
+    .hero-foto3 {
+        transform: translateY(16px);
+    }
+}
+
+/* Enhanced Floating Cards */
+.floating-card:hover {
+    animation-play-state: paused;
+}
+
+.floating-card .group:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Irregular Grid Layout */
+.floating-card:nth-child(1) {
+    grid-row: span 2;
+}
+
+.floating-card:nth-child(2) {
+    grid-row: span 1;
+}
+
+.floating-card:nth-child(3) {
+    grid-row: span 1;
+}
+
+/* Responsive adjustments for floating cards */
+@media (max-width: 768px) {
+    .floating-card {
+        animation: none;
+    }
+
+    .floating-card:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+}
+
+/* Enhanced Card Hover Effects */
+.floating-card .group:hover .absolute {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.floating-card .group:hover .relative {
+    box-shadow:
+        0 25px 50px var(--shadow-glass-hover),
+        0 0 0 1px var(--border-glass);
+}
+
+/* Staggered Animation for Cards */
+.floating-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.floating-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.floating-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.floating-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Quiz Design Improvements */
+#quiz-container {
+    transition: all 0.3s ease-in-out;
+}
+
+#question-container {
+    transition: all 0.3s ease-in-out;
+    min-height: 100px;
+}
+
+#options-container button {
+    transition: all 0.2s ease-in-out;
+}
+
+/* These are already handled by Tailwind dark:hover classes, but can be kept for non-TW elements */
+#options-container button:hover {
+    transform: translateX(5px);
+}
+
+/* Enhanced Glass Effect for Gallery */
+.floating-card .relative {
+    background: var(--bg-glass-gallery);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass-gallery);
+    box-shadow:
+        0 8px 32px var(--shadow-glass),
+        inset 0 1px 0 var(--shadow-inset-glass-gallery);
+}
+
+.dark .floating-card .relative {
+    background: var(--bg-glass-gallery);
+    border: 1px solid var(--border-glass-gallery);
+    box-shadow:
+        0 8px 32px var(--shadow-glass),
+        inset 0 1px 0 var(--shadow-inset-glass-gallery);
+}
+
+/* Efeitos de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+
+    .animate-float,
+    .animate-pulse-slow,
+    .animate-shimmer,
+    .animate-rotate-slow,
+    .typing-effect,
+    .particle-system .particle,
+    .floating-card {
+        animation: none;
+    }
+
+    .hover-lift:hover,
+    .hover-scale:hover,
+    .hover-tilt:hover {
+        transform: none;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .floating-card {
+        opacity: 1;
+        transform: none;
+    }
+}

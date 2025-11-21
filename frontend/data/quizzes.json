@@ -1,0 +1,119 @@
+{
+    "quizzes": [
+        {
+            "hqId": 1,
+            "questions": [
+                {
+                    "question": "1. Um caminhoneiro tira um cochilo de 3 segundos durante uma viagem. Nesse período, qual foi a distância percorrida pelo caminhão , considerando que estava a uma velocidade constante de 144 km/h?",
+                    "options": [
+                        "a) 80 m",
+                        "b) 100 m",
+                        "c) 120 m",
+                        "d) 144 m"
+                    ],
+                    "correctAnswer": "c",
+                    "explanation": "(144 km/h ÷ 3,6 = 40 m/s → 40 × 3 = 120 m)"
+                },
+                {
+                    "question": "2. Durante o sonho, Newton pergunta:\n “Você sabe a diferença entre deslocamento e trajetória, senhorita Amélia?”\n O que ela deve responder?",
+                    "options": [
+                        "a) Deslocamento é a soma de todas as distâncias; trajetória é só a linha reta.",
+                        "b) Deslocamento é a  extensão da linha reta que liga os dois pontos; trajetória é o caminho percorrido.",
+                        "c) Ambos são a mesma coisa.",
+                        "d) Deslocamento envolve curvas; trajetória é sempre reta."
+                    ],
+                    "correctAnswer": "b",
+                    "explanation": "Deslocamento é a  extensão da linha reta que liga os dois pontos; trajetória é o caminho percorrido."
+                },
+                {
+                    "question": "3. Na corrida de 400 metros rasos, a maçã completa o circuito em 2min 13s.\n Qual foi sua velocidade média?",
+                    "options": [
+                        "a) 2 m/s",
+                        "b) 4 m/s",
+                        "c) 3 m/s",
+                        "d) 1,5 m/s"
+                    ],
+                    "correctAnswer": "c",
+                    "explanation": ""
+                },
+                {
+                    "question": "4. Newton reforça a importância de usar a unidade correta.\n Qual é a unidade da velocidade média no Sistema Internacional de Unidades (SI)?",
+                    "options": [
+                        "a) km/h",
+                        "b) m/h",
+                        "c) m/s",
+                        "d) m/min"
+                    ],
+                    "correctAnswer": "c",
+                    "explanation": ""
+                },
+                {
+                    "question": "5. Amélia tenta converter velocidade durante a explicação de Newton.\n Para converter de km/h para m/s, o que ela deve fazer?",
+                    "options": [
+                        "a) Multiplicar por 3,6",
+                        "b) Dividir por 3,6",
+                        "c) Somar 3,6",
+                        "d) Subtrair 3,6"
+                    ],
+                    "correctAnswer": "b",
+                    "explanation": ""
+                },
+                {
+                    "question": "6. Em outra cena, Newton comenta:\n “Se a maçã correr a 36 km/h, sua velocidade será equivalente a quantos m/s?”",
+                    "options": [
+                        "a) 10 m/s",
+                        "b) 12 m/s",
+                        "c) 9 m/s",
+                        "d) 3,6 m/s"
+                    ],
+                    "correctAnswer": "a",
+                    "explanation": ""
+                },
+                {
+                    "question": "7. Durante uma experiência, Amélia mede o movimento de um carrinho de rolimã  que anda com velocidade constante de 15 m/s por 2 minutos.\n Qual é a distância percorrida?",
+                    "options": [
+                        "a) 30 m",
+                        "b) 180 m",
+                        "c) 900 m",
+                        "d) 1800 m"
+                    ],
+                    "correctAnswer": "d",
+                    "explanation": ""
+                },
+                {
+                    "question": "8. Durante o sonho, Amélia observa a maçã correndo apressada para o trabalho. Se a maçã percorre 50 metros em 10 segundos, qual é a velocidade média dela?",
+                    "options": [
+                        "a) 3 m/s",
+                        "b) 5 m/s",
+                        "c) 4 m/s",
+                        "d) 6 m/s"
+                    ],
+                    "correctAnswer": "b",
+                    "explanation": "(Vm = ΔS ÷ Δt = 50 ÷ 10 = 5 m/s)"
+                },
+                {
+                    "question": "9. Enquanto o personagem Newton explica sobre unidades de medida, ele diz:\n “Se a maçã estivesse se movendo a 18 km/h, qual seria essa velocidade em m/s?”\n Ajude Amélia a resolver!",
+                    "options": [
+                        "a) 3,6 m/s",
+                        "b) 5 m/s",
+                        "c) 6 m/s",
+                        "d) 10 m/s"
+                    ],
+                    "correctAnswer": "b",
+                    "explanation": "(18 ÷ 3,6 = 5 m/s)"
+                },
+                {
+                    "question": "10. Na cena do campo de atletismo, a maçã derruba pipocas por todo o caminho até a arquibancada.\nNewton explica que isso representa a trajetória da maçã.\nMas se o ponto da vendinha (S₀) e o da arquibancada (S) estão separados por 80 metros em linha reta, e a maçã percorreu uma distância total de 100 metros, qual é o deslocamento dela?",
+                    "options": [
+                        "a) 100 m",
+                        "b) 180 m",
+                        "c) 20 m",
+                        "d) 80 m"
+                    ],
+                    "correctAnswer": "d",
+                    "explanation": ""
+                }
+            ]
+        }
+    ]
+}

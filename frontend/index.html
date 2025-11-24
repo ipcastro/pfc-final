@@ -65,46 +65,128 @@
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900">
-    <nav class="fixed w-full z-20 top-0 start-0 bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <div class="flex items-center space-x-3">
-                <a href="#inicio" class="flex items-center space-x-3">
-                    <img src="img/logopng.png" class="h-12" alt="Física Divertida Logo">
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fantástico mundo da Física</span>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-sm sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+            <!-- Logo (Esquerda) -->
+            <div class="flex items-center space-x-2 md:space-x-3 flex-shrink-0">
+                <a href="#inicio" class="flex items-center space-x-2 md:space-x-3 group">
+                    <img src="img/logopng.png" class="h-8 sm:h-10 md:h-12 flex-shrink-0 transition-transform duration-300 group-hover:scale-105" alt="Fantástico mundo da Física Logo">
+                    <span class="self-center text-xs sm:text-sm md:text-xl lg:text-2xl font-semibold whitespace-nowrap dark:text-white">
+                        <span class="hidden sm:inline">Fantástico mundo da Física</span>
+                        <span class="sm:hidden">FMF</span>
+                    </span>
                 </a>
             </div>
-            <div class="flex items-center space-x-3 md:order-3">
-                <div id="theme-toggle-container">
-                    <!-- O botão de alternância de tema será inserido aqui -->
+
+            <!-- Links de Navegação (Centro) -->
+            <div class="hidden lg:flex items-center justify-center flex-1">
+                <ul class="flex items-center space-x-4 xl:space-x-6 font-medium">
+                    <li>
+                        <a href="#inicio" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 transition-colors duration-200" aria-current="page">Início</a>
+                    </li>
+                    <li>
+                        <a href="#personagens" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">Personagens</a>
+                    </li>
+                    <li>
+                        <a href="#aprender" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">Aprender</a>
+                    </li>
+                    <li>
+                        <a href="#hq" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">HQ</a>
+                    </li>
+                    <li>
+                        <a href="#equipe" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">Equipe</a>
+                    </li>
+                    <li>
+                        <a href="#faq" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Opções do Usuário (Direita) -->
+            <div class="flex items-center space-x-2 md:space-x-3 flex-shrink-0">
+                <div id="theme-toggle-container" class="hidden md:block">
+                    <!-- Theme toggle button will be inserted here -->
                 </div>
-                <div id="user-status-container" class="flex items-center space-x-3">
-                    <!-- O status do usuário (logado ou não) será inserido aqui pelo JavaScript -->
+                <div id="theme-toggle-container-mobile" class="md:hidden">
+                    <!-- Theme toggle button mobile will be inserted here -->
                 </div>
-                <button id="hamburger" class="hamburger">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
+                <div id="user-status-container" class="hidden md:flex items-center space-x-2">
+                    <!-- User status (login/logout) will be inserted here -->
+                </div>
+                <button
+                    data-collapse-toggle="navbar-default"
+                    type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-default"
+                    aria-expanded="false"
+                >
+                    <span class="sr-only">Open main menu</span>
+                    <svg
+                        class="w-5 h-5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 17 14"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15"
+                        />
+                    </svg>
                 </button>
             </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-2" id="navbar-sticky">
-                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+
+            <!-- Menu Mobile (oculto por padrão) -->
+            <div
+                class="hidden w-full lg:hidden"
+                id="navbar-default"
+            >
+                <!-- Status do Usuário Mobile -->
+                <div id="user-status-container-mobile" class="p-4 border-b border-gray-200 dark:border-gray-700">
+                    <!-- User status mobile will be inserted here -->
+                </div>
+                <ul
+                    class="flex flex-col p-4 mt-0 font-medium border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 space-y-2"
+                >
                     <li>
-                        <a href="#inicio" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">Início</a>
+                        <a
+                            href="#inicio"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded hover:bg-blue-800 dark:hover:bg-blue-600 transition-colors duration-200"
+                            aria-current="page"
+                        >Início</a>
                     </li>
                     <li>
-                        <a href="#personagens" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Personagens</a>
+                        <a
+                            href="#personagens"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 transition-colors duration-200"
+                        >Personagens</a>
                     </li>
                     <li>
-                        <a href="#aprender" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Aprender</a>
+                        <a
+                            href="#aprender"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 transition-colors duration-200"
+                        >Aprender</a>
                     </li>
                     <li>
-                        <a href="#hq" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">HQ</a>
+                        <a
+                            href="#hq"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 transition-colors duration-200"
+                        >HQ</a>
                     </li>
                     <li>
-                        <a href="#equipe" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Equipe</a>
+                        <a
+                            href="#equipe"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 transition-colors duration-200"
+                        >Equipe</a>
                     </li>
                     <li>
-                        <a href="#faq" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">FAQ</a>
+                        <a
+                            href="#faq"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 transition-colors duration-200"
+                        >FAQ</a>
                     </li>
                 </ul>
             </div>
@@ -254,8 +336,8 @@
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-br from-secondary-500/20 to-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div class="relative md:flex">
-                            <div class="md:w-1/2 relative overflow-hidden">
-                                <img src="img/Newton2.jpg" alt="Isaac Newton" class="w-full h-80 md:h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <div class="md:w-1/2 relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+                                <img src="img/Newton2.jpg" alt="Isaac Newton" class="w-full h-80 md:h-full object-contain md:object-cover transform group-hover:scale-110 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                         <div class="p-8 md:w-1/2">
@@ -630,33 +712,6 @@
             });
         });
 
-        // Menu mobile
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('navbar-sticky');
-
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            menu.classList.toggle('active');
-            menu.classList.toggle('hidden');
-        });
-
-        // Fechar menu ao clicar em um link
-        document.querySelectorAll('#navbar-sticky a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                menu.classList.remove('active');
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Fechar menu ao clicar fora dele
-        document.addEventListener('click', (e) => {
-            if (!menu.contains(e.target) && !hamburger.contains(e.target) && menu.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                menu.classList.remove('active');
-                menu.classList.add('hidden');
-            }
-        });
 
         // Scroll Progress Indicator
         function updateScrollProgress() {
@@ -823,6 +878,7 @@
         });
     </script>
     <script src="js/user-status.js"></script>
+    <script src="js/navbar-mobile.js"></script>
 </body>
 
 </html>

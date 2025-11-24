@@ -42,7 +42,44 @@ themeToggleBtn.addEventListener('click', () => {
 // Automatically find the container and place the button
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleContainer = document.getElementById('theme-toggle-container');
+    const themeToggleContainerMobile = document.getElementById('theme-toggle-container-mobile');
+    
     if (themeToggleContainer) {
-        themeToggleContainer.appendChild(themeToggleBtn);
+        // Criar cópia do botão para desktop
+        const desktopBtn = themeToggleBtn.cloneNode(true);
+        desktopBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+            // Sincronizar ambos os botões
+            updateAllThemeButtons(newTheme);
+        });
+        themeToggleContainer.appendChild(desktopBtn);
     }
+    
+    if (themeToggleContainerMobile) {
+        // Criar cópia do botão para mobile
+        const mobileBtn = themeToggleBtn.cloneNode(true);
+        mobileBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+            // Sincronizar ambos os botões
+            updateAllThemeButtons(newTheme);
+        });
+        themeToggleContainerMobile.appendChild(mobileBtn);
+    }
+    
+    // Sincronizar ambos os botões quando o tema muda
+    function updateAllThemeButtons(theme) {
+        const allButtons = document.querySelectorAll('#theme-toggle');
+        allButtons.forEach(btn => {
+            btn.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
+        });
+    }
+    
+    // Aplicar tema inicial e atualizar botões
+    updateAllThemeButtons(initialTheme);
 });

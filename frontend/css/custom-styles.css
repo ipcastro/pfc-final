@@ -404,6 +404,24 @@
         background: rgba(31, 41, 55, 0.9);
         /* Corresponds to gray-800 with opacity */
     }
+    
+    /* Ajuste elegante para imagem do Newton no mobile */
+    .card-glass .relative > div:first-child {
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+    }
+    
+    .card-glass .relative > div:first-child img[alt="Isaac Newton"] {
+        object-fit: contain !important;
+        object-position: center;
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
 }
 
 /* FAQ Animations */
@@ -958,5 +976,231 @@
     .floating-card {
         opacity: 1;
         transform: none;
+    }
+}
+
+/* Ajustes para posicionamento dos elementos do menu no canto direito */
+nav.fixed .flex.items-center.space-x-2.md\:space-x-3.md\:order-3 {
+    margin-left: auto;
+    padding-right: 0;
+}
+
+/* Garantir que o hamburger e botões de tema fiquem no canto direito */
+#hamburger,
+#theme-toggle-container,
+#theme-toggle-container-mobile,
+#user-status-container {
+    flex-shrink: 0;
+}
+
+/* Reduzir espaçamento entre botões no desktop */
+@media (min-width: 768px) {
+    #user-status-container {
+        gap: 0.5rem;
+    }
+    
+    #user-status-container a {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* Melhorias de responsividade para navbar */
+@media (max-width: 640px) {
+    /* Ajustar tamanho da logo em telas muito pequenas */
+    nav img {
+        height: 2rem !important; /* h-8 */
+    }
+    
+    /* Ajustar espaçamento da navbar */
+    nav .px-4 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* Ajustar tamanho dos botões no mobile */
+    nav button[data-collapse-toggle] {
+        width: 2.25rem;
+        height: 2.25rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Ajustes para telas médias (tablets) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* Garantir que os links fiquem visíveis apenas em telas grandes */
+    nav .hidden.lg\:flex {
+        display: none !important;
+    }
+    
+    /* Ajustar espaçamento dos elementos da navbar */
+    nav .space-x-2 {
+        gap: 0.5rem;
+    }
+}
+
+/* Garantir que o menu mobile funcione corretamente */
+nav #navbar-default,
+nav #navbar-mobile {
+    transition: all 0.3s ease-in-out;
+}
+
+nav #navbar-default.hidden,
+nav #navbar-mobile.hidden {
+    display: none !important;
+}
+
+/* Melhorar acessibilidade do menu mobile */
+@media (max-width: 1024px) {
+    nav #navbar-default ul,
+    nav #navbar-mobile ul {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+    
+    /* Adicionar scroll suave */
+    nav #navbar-default ul,
+    nav #navbar-mobile ul {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Garantir que os três elementos da navbar fiquem bem distribuídos */
+nav .max-w-screen-xl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Ajustar ordem dos elementos em telas pequenas */
+@media (max-width: 1024px) {
+    /* Logo sempre à esquerda */
+    nav > div > div:first-child {
+        order: 1;
+    }
+    
+    /* Opções do usuário sempre à direita */
+    nav > div > div:last-child {
+        order: 3;
+    }
+    
+    /* Menu mobile sempre abaixo */
+    nav #navbar-default,
+    nav #navbar-mobile {
+        order: 4;
+        width: 100%;
+    }
+}
+
+/* Melhorar espaçamento entre elementos da navbar */
+nav .flex.items-center.space-x-2 {
+    gap: 0.5rem;
+}
+
+nav .flex.items-center.space-x-3 {
+    gap: 0.75rem;
+}
+
+/* Garantir que o texto não quebre em telas pequenas */
+nav a span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Ajustar padding da navbar para melhor uso do espaço */
+@media (max-width: 640px) {
+    nav .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+}
+
+
+/* Melhorias de responsividade para página HQ */
+#hq-container {
+    min-height: 50vh;
+}
+
+/* Cards de HQ responsivos */
+#hq-container > div {
+    transition: all 0.3s ease;
+    overflow: visible !important;
+}
+
+/* Garantir que as imagens não sejam cortadas */
+#hq-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain !important;
+}
+
+/* Ajustar hover scale em mobile para evitar problemas */
+@media (max-width: 768px) {
+    #hq-container > div:hover {
+        transform: none;
+    }
+    
+    /* Garantir que as imagens não ultrapassem o container */
+    #hq-container img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Melhorar espaçamento dos botões em mobile */
+    #hq-container .flex.flex-col.sm\:flex-row a {
+        width: 100%;
+        min-height: 44px; /* Tamanho mínimo para touch targets */
+    }
+}
+
+/* Ajustes para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #hq-container > div {
+        max-width: 100%;
+    }
+    
+    #hq-container img {
+        max-width: 280px;
+    }
+}
+
+/* Melhorar legibilidade do texto em telas pequenas */
+@media (max-width: 640px) {
+    #hq-container h2 {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+    
+    #hq-container p {
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+}
+
+/* Garantir que os botões não fiquem muito pequenos */
+#hq-container a {
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    #hq-container a {
+        min-width: 100%;
+    }
+}
+
+/* Melhorar espaçamento entre elementos em mobile */
+@media (max-width: 640px) {
+    #hq-container > div > div {
+        padding: 1rem;
+    }
+}
+
+/* Ajustar seção hero em mobile */
+@media (max-width: 640px) {
+    section.pt-20 {
+        padding-top: 4rem;
     }
 }
